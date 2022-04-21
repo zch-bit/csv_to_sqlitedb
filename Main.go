@@ -47,6 +47,7 @@ func LoadData(file *os.File) []*Object {
 
 	objects := make([]*Object, 0)
 	for {
+		// Read by line
 		record, err := reader.Read()
 		if err == io.EOF {
 			fmt.Println("read all data")
